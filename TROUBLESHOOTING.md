@@ -29,14 +29,14 @@
 
 **macOS:**
 1. Open System Settings → Privacy & Security → Microphone
-2. Ensure OpenWhispr is listed and enabled
+2. Ensure Mitra is listed and enabled
 3. If not listed, click "Grant Access" in the app to trigger the permission prompt
 4. You can also click "Open Microphone Privacy" button in the app
 
 **Windows:**
 1. Open Settings → Privacy → Microphone
 2. Ensure "Allow apps to access your microphone" is ON
-3. Ensure OpenWhispr is listed and enabled
+3. Ensure Mitra is listed and enabled
 4. You can also click "Open Privacy Settings" button in the app
 
 **Linux:**
@@ -95,16 +95,16 @@
    - Fedora/RHEL: `sudo dnf install wl-clipboard`
    - Arch: `sudo pacman -S wl-clipboard`
 2. Ensure a paste tool is installed (`xdotool` recommended, or `wtype` for Sway/Hyprland, or `ydotool` with daemon)
-3. Restart OpenWhispr after installing
+3. Restart Mitra after installing
 
-OpenWhispr tries clipboard methods in order: `wl-copy` (most reliable) → renderer `navigator.clipboard` → X11 fallback.
+Mitra tries clipboard methods in order: `wl-copy` (most reliable) → renderer `navigator.clipboard` → X11 fallback.
 
 ### Meeting Transcription Issues
 
 **Symptoms:** Meeting detection not working, no transcription, audio not captured
 
 **macOS:**
-1. Grant Screen Recording permission: System Settings → Privacy & Security → Screen Recording → enable OpenWhispr
+1. Grant Screen Recording permission: System Settings → Privacy & Security → Screen Recording → enable Mitra
 2. Restart the app after granting permission
 3. Ensure Google Calendar is connected in Integrations
 
@@ -139,8 +139,8 @@ For detailed diagnostics, see [DEBUG.md](DEBUG.md).
 
 1. Enable debug mode and reproduce the issue
 2. Collect diagnostic output from commands above
-3. Open an issue at https://github.com/OpenWhispr/openwhispr/issues with:
+3. Open an issue at https://github.com/Mitra/openwhispr/issues with:
    - OS version
-   - OpenWhispr version
+   - Mitra version
    - Relevant log sections
    - Steps to reproduce

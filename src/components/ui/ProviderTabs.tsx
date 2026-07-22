@@ -9,7 +9,7 @@ export interface ProviderTabItem {
   recommended?: boolean;
 }
 
-type ColorScheme = Exclude<BaseColorScheme, "blue"> | "dynamic";
+type ColorScheme = BaseColorScheme | "dynamic";
 
 interface ProviderTabsProps {
   providers: ProviderTabItem[];

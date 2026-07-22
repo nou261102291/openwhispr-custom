@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   build:
-    if: github.repository == 'OpenWhispr/openwhispr'
+    if: github.repository == 'mitra/mitra'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -1,9 +1,9 @@
 {
-  "appId": "com.herotools.openwispr",
-  "productName": "OpenWhispr",
+  "appId": "com.mitra.app",
+  "productName": "Mitra",
   "protocols": {
-    "name": "OpenWhispr Protocol",
-    "schemes": ["openwhispr"]
+    "name": "Mitra Protocol",
+    "schemes": ["mitra"]
   },
   "directories": {
     "output": "dist"

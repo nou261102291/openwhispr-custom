@@ -91,6 +91,12 @@ export default function ControlPanelSidebar({
         style={{ WebkitAppRegion: "drag" } as React.CSSProperties}
       />
 
+      {/* Logo area - shows Mitra icon above the search bar */}
+      <div className="px-3 pt-2 pb-1 flex items-center gap-2">
+        <img src={logoIcon} alt="Mitra" className="w-7 h-7 rounded-md" />
+        <div className="text-xs font-semibold text-foreground">Mitra</div>
+      </div>
+
       {onOpenSearch && (
         <div className="px-2 pt-2 pb-1">
           <button

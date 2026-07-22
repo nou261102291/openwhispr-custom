@@ -40,6 +40,12 @@ export default function ControlPanel() {
   const history = useTranscriptions();
   const [isLoading, setIsLoading] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
+  // Listen for global 'mitra-open-settings' events (mini logo click)
+  useEffect(() => {
+    const handler = () => setShowSettings(true);
+    window.addEventListener("mitra-open-settings", handler);
+    return () => window.removeEventListener("mitra-open-settings", handler);
+  }, []);
   const [showUpgradePrompt, setShowUpgradePrompt] = useState(false);
   const [limitData, setLimitData] = useState<{ wordsUsed: number; limit: number } | null>(null);
   const hasShownUpgradePrompt = useRef(false);

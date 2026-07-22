@@ -7,10 +7,10 @@ Enable verbose logging to diagnose issues like "no audio detected" or transcript
 ### Option 1: Command Line
 ```bash
 # macOS
-/Applications/OpenWhispr.app/Contents/MacOS/OpenWhispr --log-level=debug
+/Applications/Mitra.app/Contents/MacOS/Mitra --log-level=debug
 
 # Windows
-OpenWhispr.exe --log-level=debug
+Mitra.exe --log-level=debug
 ```
 
 ### Option 2: Environment File
@@ -20,15 +20,15 @@ OPENWHISPR_LOG_LEVEL=debug
 ```
 
 **Env file locations:**
-- macOS: `~/Library/Application Support/OpenWhispr/.env`
-- Windows: `%APPDATA%\OpenWhispr\.env`
-- Linux: `~/.config/OpenWhispr/.env`
+- macOS: `~/Library/Application Support/Mitra/.env`
+- Windows: `%APPDATA%\Mitra\.env`
+- Linux: `~/.config/Mitra/.env`
 
 ## Log File Locations
 
-- **macOS**: `~/Library/Application Support/OpenWhispr/logs/debug-*.log`
-- **Windows**: `%APPDATA%\OpenWhispr\logs\debug-*.log`
-- **Linux**: `~/.config/OpenWhispr/logs/debug-*.log`
+- **macOS**: `~/Library/Application Support/Mitra/logs/debug-*.log`
+- **Windows**: `%APPDATA%\Mitra\logs\debug-*.log`
+- **Linux**: `~/.config/Mitra/logs/debug-*.log`
 
 ## What Gets Logged
 

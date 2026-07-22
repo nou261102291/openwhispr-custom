@@ -85,13 +85,13 @@ function isOAuthBrowserRedirect() {
           --border-subtle: #e5e5e5;
           --text-primary: #171717;
           --text-muted: #737373;
-          --primary: #2563eb;
+          --primary: var(--color-brand-primary);
           --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08);
           --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         @media (prefers-color-scheme: dark) {
-          :root {
+            :root {
             --bg: oklch(0.1 0.005 270);
             --surface-1: oklch(0.13 0.006 270);
             --surface-2: oklch(0.155 0.008 270);
@@ -99,7 +99,7 @@ function isOAuthBrowserRedirect() {
             --border-subtle: oklch(0.2 0.004 270);
             --text-primary: oklch(0.95 0 0);
             --text-muted: oklch(0.55 0 0);
-            --primary: oklch(0.62 0.22 260);
+            --primary: var(--color-brand-primary-dark);
             --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.25);
             --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.4);
           }

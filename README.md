@@ -1,22 +1,22 @@
 <p align="center">
-  <img src="src/assets/logo.svg" alt="OpenWhispr" width="120" />
+   <img src="src/assets/icon.png" alt="Mitra" width="120" />
 </p>
 
-<h1 align="center">OpenWhispr</h1>
+<h1 align="center">Mitra</h1>
 
 <p align="center">
-  <a href="https://github.com/OpenWhispr/openwhispr/blob/main/LICENSE"><img src="https://img.shields.io/github/license/OpenWhispr/openwhispr?style=flat" alt="License" /></a>
+  <a href="https://github.com/Mitra/openwhispr/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Mitra/openwhispr?style=flat" alt="License" /></a>
   <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey?style=flat" alt="Platform" />
-  <a href="https://github.com/OpenWhispr/openwhispr/releases/latest"><img src="https://img.shields.io/github/v/release/OpenWhispr/openwhispr?style=flat&sort=semver" alt="GitHub release" /></a>
-  <a href="https://github.com/OpenWhispr/openwhispr/releases"><img src="https://img.shields.io/github/downloads/OpenWhispr/openwhispr/total?style=flat&color=blue" alt="Downloads" /></a>
-  <a href="https://github.com/OpenWhispr/openwhispr/stargazers"><img src="https://img.shields.io/github/stars/OpenWhispr/openwhispr?style=flat" alt="GitHub stars" /></a>
+  <a href="https://github.com/Mitra/openwhispr/releases/latest"><img src="https://img.shields.io/github/v/release/Mitra/openwhispr?style=flat&sort=semver" alt="GitHub release" /></a>
+  <a href="https://github.com/Mitra/openwhispr/releases"><img src="https://img.shields.io/github/downloads/Mitra/openwhispr/total?style=flat&color=blue" alt="Downloads" /></a>
+  <a href="https://github.com/Mitra/openwhispr/stargazers"><img src="https://img.shields.io/github/stars/Mitra/openwhispr?style=flat" alt="GitHub stars" /></a>
 </p>
 
 <p align="center">Voice-to-text dictation and productivity app with AI agents, meeting transcription, notes, and local/cloud speech recognition.<br/>Privacy-first and available cross-platform.</p>
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=OpenWhispr/openwhispr&type=date&legend=top-left)](https://www.star-history.com/#OpenWhispr/openwhispr&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=Mitra/openwhispr&type=date&legend=top-left)](https://www.star-history.com/#Mitra/openwhispr&type=date&legend=top-left)
 
 ## License
 
@@ -64,7 +64,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Cloud & Account
 
-- ☁️ **OpenWhispr Cloud**: Sign in and transcribe instantly — no API keys needed, with free and Pro plans
+- ☁️ **Mitra Cloud**: Sign in and transcribe instantly — no API keys needed, with free and Pro plans
 - 🔐 **Account System**: Google OAuth and email/password sign-in with email verification
 - 💳 **Subscription Management**: Free tier (2,000 words/week), Pro tier (unlimited), 7-day free trial
 - 🔗 **Referral Program**: Invite friends and earn free Pro months with shareable referral cards
@@ -96,7 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/OpenWhispr/openwhispr.git
+   git clone https://github.com/Mitra/openwhispr.git
    cd openwhispr
    ```
 
@@ -152,8 +152,8 @@ If you want to build a standalone app for personal use:
 # Build without code signing (no certificates required)
 npm run pack
 
-# The unsigned app will be in: dist/mac-arm64/OpenWhispr.app (macOS)
-# or dist/win-unpacked/OpenWhispr.exe (Windows)
+# The unsigned app will be in: dist/mac-arm64/Mitra.app (macOS)
+# or dist/win-unpacked/Mitra.exe (Windows)
 # or dist/linux-unpacked/open-whispr (Linux)
 ```
 
@@ -163,7 +163,7 @@ npm run pack
 
 **Native Paste Binary (`windows-fast-paste`)**:
 
-OpenWhispr ships a native C binary for pasting text on Windows, using the Win32 `SendInput` API. This is the **primary** paste mechanism — `nircmd` and PowerShell are only used as fallbacks if the native binary fails.
+Mitra ships a native C binary for pasting text on Windows, using the Win32 `SendInput` API. This is the **primary** paste mechanism — `nircmd` and PowerShell are only used as fallbacks if the native binary fails.
 
 How it works:
 
@@ -188,7 +188,7 @@ The build script (`scripts/build-windows-fast-paste.js`) first attempts to downl
 
 #### Linux (Multiple Package Formats)
 
-OpenWhispr now supports multiple Linux package formats for maximum compatibility:
+Mitra now supports multiple Linux package formats for maximum compatibility:
 
 **Available Formats**:
 
@@ -205,10 +205,10 @@ OpenWhispr now supports multiple Linux package formats for maximum compatibility
 npm run build:linux
 
 # Find packages in dist/:
-# - OpenWhispr-x.x.x-linux-x64.AppImage
-# - OpenWhispr-x.x.x-linux-x64.deb
-# - OpenWhispr-x.x.x-linux-x64.rpm
-# - OpenWhispr-x.x.x-linux-x64.tar.gz
+# - Mitra-x.x.x-linux-x64.AppImage
+# - Mitra-x.x.x-linux-x64.deb
+# - Mitra-x.x.x-linux-x64.rpm
+# - Mitra-x.x.x-linux-x64.tar.gz
 ```
 
 **Optional: Building Flatpak** (requires additional setup):
@@ -231,27 +231,27 @@ npm run build:linux
 
 ```bash
 # Debian/Ubuntu
-sudo apt install ./dist/OpenWhispr-*-linux-x64.deb
+sudo apt install ./dist/Mitra-*-linux-x64.deb
 
 # Fedora/RHEL
-sudo dnf install ./dist/OpenWhispr-*-linux-x64.rpm
+sudo dnf install ./dist/Mitra-*-linux-x64.rpm
 
 # Universal tar.gz (no root required)
-tar -xzf dist/OpenWhispr-*-linux-x64.tar.gz
-cd OpenWhispr-*/
+tar -xzf dist/Mitra-*-linux-x64.tar.gz
+cd Mitra-*/
 ./openwhispr
 
 # Flatpak
-flatpak install --user ./dist/OpenWhispr-*-linux-x64.flatpak
+flatpak install --user ./dist/Mitra-*-linux-x64.flatpak
 
 # AppImage (existing method)
-chmod +x dist/OpenWhispr-*.AppImage
-./dist/OpenWhispr-*.AppImage
+chmod +x dist/Mitra-*.AppImage
+./dist/Mitra-*.AppImage
 ```
 
 **Native Paste Binary (`linux-fast-paste`)**:
 
-OpenWhispr ships a native C binary for pasting text on Linux, compiled automatically at build time. This is the **primary** paste mechanism — external tools like `xdotool` and `wtype` are only used as fallbacks if the native binary fails.
+Mitra ships a native C binary for pasting text on Linux, compiled automatically at build time. This is the **primary** paste mechanism — external tools like `xdotool` and `wtype` are only used as fallbacks if the native binary fails.
 
 How it works:
 
@@ -280,7 +280,7 @@ The build script (`scripts/build-linux-fast-paste.js`) runs during `npm run comp
 3. Caches the binary and skips rebuilds unless the source or flags change
 4. Gracefully falls back to system tools if compilation fails
 
-If the native binary isn't available, OpenWhispr falls back to external paste tools in this order:
+If the native binary isn't available, Mitra falls back to external paste tools in this order:
 
 **Fallback Dependencies for Automatic Paste**:
 
@@ -350,13 +350,13 @@ sudo dnf install kdotool  # Fedora/RHEL
 sudo pacman -S kdotool    # Arch
 ```
 
-> ℹ️ **Note**: OpenWhispr automatically tries paste methods in this order: native `linux-fast-paste` binary (XTest or uinput) → `wtype` → `ydotool` → `xdotool` (for XWayland apps). If no paste method works, text will still be copied to the clipboard - you'll just need to paste manually with Ctrl+V.
+> ℹ️ **Note**: Mitra automatically tries paste methods in this order: native `linux-fast-paste` binary (XTest or uinput) → `wtype` → `ydotool` → `xdotool` (for XWayland apps). If no paste method works, text will still be copied to the clipboard - you'll just need to paste manually with Ctrl+V.
 
 > ⚠️ **ydotool Requirements**: The `ydotoold` daemon must be running for ydotool to work. Start it manually with `sudo ydotoold &` or enable the systemd service as shown above.
 
 **GNOME Wayland Global Hotkeys**:
 
-On GNOME Wayland, Electron's standard global shortcuts don't work due to Wayland's security model. OpenWhispr automatically uses native GNOME keyboard shortcuts via D-Bus and gsettings:
+On GNOME Wayland, Electron's standard global shortcuts don't work due to Wayland's security model. Mitra automatically uses native GNOME keyboard shortcuts via D-Bus and gsettings:
 
 - Hotkeys are registered as GNOME custom shortcuts (visible in Settings → Keyboard → Shortcuts)
 - Default hotkey is `Alt+R` (backtick not supported on GNOME Wayland)
@@ -382,7 +382,7 @@ npm run build:linux  # Linux
 ### First Time Setup
 
 1. **Choose Processing Method**:
-   - **OpenWhispr Cloud**: Sign in for instant cloud transcription with free and Pro plans
+   - **Mitra Cloud**: Sign in for instant cloud transcription with free and Pro plans
    - **Bring Your Own Key**: Use your own OpenAI/Groq/AssemblyAI API keys
    - **Local Processing**: Download Whisper or Parakeet models for completely private transcription
 
@@ -467,7 +467,7 @@ Improve transcription accuracy for specific words, names, or technical terms:
 
 - Uncommon names (e.g., "Sergey", "Xanthe")
 - Technical jargon (e.g., "Kubernetes", "OAuth")
-- Brand names (e.g., "OpenWhispr", "whisper.cpp")
+- Brand names (e.g., "Mitra", "whisper.cpp")
 - Domain-specific terms (e.g., "amortization", "polymerase")
 
 ### Agent Mode
@@ -492,7 +492,7 @@ Automatically detect and transcribe meetings with Google Calendar integration:
 
 ### Processing Options
 
-- **OpenWhispr Cloud**:
+- **Mitra Cloud**:
   - Sign in with Google or email — no API keys needed
   - Free plan: 2,000 words/week with 7-day Pro trial for new accounts
   - Pro plan: unlimited transcriptions
@@ -692,7 +692,7 @@ DEBUG=false
 
 ### Local Whisper Setup
 
-For local processing, OpenWhispr uses OpenAI's Whisper model via whisper.cpp - a high-performance C++ implementation:
+For local processing, Mitra uses OpenAI's Whisper model via whisper.cpp - a high-performance C++ implementation:
 
 1. **Bundled Binary**: whisper.cpp is bundled with the app for all platforms
 2. **GGML Models**: Downloads optimized GGML models on first use to `~/.cache/openwhispr/whisper-models/`
@@ -713,7 +713,7 @@ For local processing, OpenWhispr uses OpenAI's Whisper model via whisper.cpp - a
 
 ### Local Parakeet Setup (Alternative)
 
-OpenWhispr also supports NVIDIA Parakeet models via sherpa-onnx - a fast alternative to Whisper:
+Mitra also supports NVIDIA Parakeet models via sherpa-onnx - a fast alternative to Whisper:
 
 1. **Bundled Binary**: sherpa-onnx is bundled with the app for all platforms
 2. **INT8 Quantized Models**: Efficient CPU inference
@@ -757,7 +757,7 @@ We welcome contributions! Please follow these steps:
 
 ## Security
 
-OpenWhispr is designed with privacy and security in mind:
+Mitra is designed with privacy and security in mind:
 
 - **Local Processing Option**: Keep your voice data completely private
 - **No Analytics**: We don't collect any usage data or telemetry
@@ -774,7 +774,7 @@ OpenWhispr is designed with privacy and security in mind:
 1. **Microphone permissions**: Grant permissions in System Preferences/Settings
 2. **Accessibility permissions (macOS)**: Required for automatic text pasting
    - Go to System Settings → Privacy & Security → Accessibility
-   - Add OpenWhispr and enable the checkbox
+   - Add Mitra and enable the checkbox
    - Use "Fix Permission Issues" in Control Panel if needed
 3. **API key errors** (cloud processing only): Ensure your OpenAI API key is valid and has credits
    - Set key through Control Panel or .env file
@@ -802,7 +802,7 @@ OpenWhispr is designed with privacy and security in mind:
 
 ### Getting Help
 
-- Check the [Issues](https://github.com/OpenWhispr/openwhispr/issues) page
+- Check the [Issues](https://github.com/Mitra/openwhispr/issues) page
 - Review the console logs for debugging information
 - For local processing: Ensure whisper.cpp is accessible and models are downloaded
 - For cloud processing: Verify your OpenAI API key and billing status
@@ -817,8 +817,8 @@ OpenWhispr is designed with privacy and security in mind:
 
 ## FAQ
 
-**Q: Is OpenWhispr really free?**
-A: Yes! OpenWhispr is open source and free to use. The free plan includes 2,000 words/week of cloud transcription, and local processing is completely free with no limits. Paid plans start from as little as $8/month.
+**Q: Is Mitra really free?**
+A: Yes! Mitra is open source and free to use. The free plan includes 2,000 words/week of cloud transcription, and local processing is completely free with no limits. Paid plans start from as little as $8/month.
 
 **Q: Which processing method should I use?**
 A: Use local processing for privacy and offline use. Use cloud processing for speed and convenience.
@@ -833,27 +833,27 @@ A: Open the Control Panel (right-click tray icon) and go to Settings. You can se
 A: With local processing, your audio never leaves your device. With cloud processing, audio is sent to OpenAI's servers (see their privacy policy).
 
 **Q: What languages are supported?**
-A: OpenWhispr supports 58 languages including English, Spanish, French, German, Chinese, Japanese, and more. Set your preferred language in the .env file or use auto-detect.
+A: Mitra supports 58 languages including English, Spanish, French, German, Chinese, Japanese, and more. Set your preferred language in the .env file or use auto-detect.
 
 **Q: What is Agent Mode?**
 A: Agent Mode opens a chat overlay where you can have interactive AI conversations using voice. It supports streaming responses from all providers (OpenAI, Anthropic, Gemini, Groq, local) and saves conversation history.
 
 **Q: How does meeting transcription work?**
-A: Connect your Google Calendar in Integrations. When a meeting starts (Zoom, Teams, FaceTime), OpenWhispr detects it and offers to record. Audio is transcribed in real-time via OpenAI Realtime API. On macOS, screen recording permission is required to capture meeting audio.
+A: Connect your Google Calendar in Integrations. When a meeting starts (Zoom, Teams, FaceTime), Mitra detects it and offers to record. Audio is transcribed in real-time via OpenAI Realtime API. On macOS, screen recording permission is required to capture meeting audio.
 
 **Q: Where are my notes stored?**
 A: Notes are stored locally in SQLite with optional cloud sync. They support full-text search (FTS5), folder organization, and AI-powered enhancement actions.
 
-**Q: Does OpenWhispr require Input Monitoring on macOS?**
-A: No. As of v1.6.0, OpenWhispr uses NSEvent monitors instead of CGEvent taps, eliminating the Input Monitoring permission requirement. Only Microphone and Accessibility permissions are needed (plus Screen Recording for meeting features).
+**Q: Does Mitra require Input Monitoring on macOS?**
+A: No. As of v1.6.0, Mitra uses NSEvent monitors instead of CGEvent taps, eliminating the Input Monitoring permission requirement. Only Microphone and Accessibility permissions are needed (plus Screen Recording for meeting features).
 
 ## Project Status
 
-OpenWhispr is actively maintained and ready for production use. Current version: 1.6.6
+Mitra is actively maintained and ready for production use. Current version: 1.6.6
 
 - ✅ Core dictation with local and cloud processing
 - ✅ Cross-platform support (macOS, Windows, Linux)
-- ✅ OpenWhispr Cloud with account system, usage tracking, and Stripe billing
+- ✅ Mitra Cloud with account system, usage tracking, and Stripe billing
 - ✅ Multi-provider AI (OpenAI, Anthropic, Gemini, Groq, Mistral, Local)
 - ✅ Agent Mode with streaming chat overlay and conversation history
 - ✅ Google Calendar integration with automatic meeting detection

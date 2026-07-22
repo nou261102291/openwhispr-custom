@@ -1,10 +1,10 @@
-# OpenWhispr Technical Reference for AI Assistants
+# Mitra Technical Reference for AI Assistants
 
-This document provides comprehensive technical details about the OpenWhispr project architecture for AI assistants working on the codebase.
+This document provides comprehensive technical details about the Mitra project architecture for AI assistants working on the codebase.
 
 ## Project Overview
 
-OpenWhispr is an Electron-based desktop dictation application that uses whisper.cpp for speech-to-text transcription. It supports both local (privacy-focused) and cloud (OpenAI API) processing modes.
+Mitra is an Electron-based desktop dictation application that uses whisper.cpp for speech-to-text transcription. It supports both local (privacy-focused) and cloud (OpenAI API) processing modes.
 
 ## Architecture Overview
 
@@ -399,7 +399,7 @@ Improve transcription accuracy for specific words, names, or technical terms:
 
 ### 14. GNOME Wayland Global Hotkeys
 
-On GNOME Wayland, Electron's `globalShortcut` API doesn't work due to Wayland's security model. OpenWhispr uses native GNOME shortcuts:
+On GNOME Wayland, Electron's `globalShortcut` API doesn't work due to Wayland's security model. Mitra uses native GNOME shortcuts:
 
 **Architecture**:
 1. `main.js` enables `GlobalShortcutsPortal` feature flag for Wayland
@@ -425,7 +425,7 @@ On GNOME Wayland, Electron's `globalShortcut` API doesn't work due to Wayland's 
 
 ### 15. Hyprland Wayland Global Hotkeys
 
-On Hyprland (wlroots Wayland compositor), Electron's `globalShortcut` API and the `GlobalShortcutsPortal` feature don't work reliably. OpenWhispr uses native Hyprland keybindings:
+On Hyprland (wlroots Wayland compositor), Electron's `globalShortcut` API and the `GlobalShortcutsPortal` feature don't work reliably. Mitra uses native Hyprland keybindings:
 
 **Architecture**:
 1. `main.js` enables `GlobalShortcutsPortal` feature flag for Wayland (fallback)
@@ -511,7 +511,7 @@ const { t } = useTranslation();
 1. Every new UI string must have a translation key in `en/translation.json` and all other language files
 2. Use `useTranslation()` hook in components and hooks
 3. Keep `{{variable}}` interpolation syntax for dynamic values
-4. Do NOT translate: brand names (OpenWhispr, Pro), technical terms (Markdown, Signal ID), format names (MP3, WAV), AI system prompts
+4. Do NOT translate: brand names (Mitra, Pro), technical terms (Markdown, Signal ID), format names (MP3, WAV), AI system prompts
 5. Group keys by feature area (e.g., `notes.editor.*`, `referral.toasts.*`)
 
 ### Adding New Features

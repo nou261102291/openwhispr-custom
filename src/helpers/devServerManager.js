@@ -79,12 +79,40 @@ class DevServerManager {
 
     // In packaged app, files are relative to app.getAppPath()
     const appPath = app.getAppPath();
-    const htmlPath = path.join(appPath, "src", "dist", "index.html");
 
-    return {
-      path: htmlPath,
-      query: isControlPanel ? { panel: "true" } : {},
-    };
+    // Try a few common locations for the built renderer files. Different
+    // packaging/build steps may place the Vite output under `src/dist` or
+    // directly under `dist` inside the app path or asar. Return the first
+    // existing path so loadFile() succeeds in both dev and packaged layouts.
+    const fs = require("fs");
+
+    const candidates = [
+      path.join(appPath, "src", "dist", "index.html"),
+      path.join(appPath, "dist", "index.html"),
+      path.join(appPath, "index.html"),
+    ];
+
+    for (const candidate of candidates) {
+      try {
+        // If the candidate path points inside an ASAR archive, `fs.existsSync`
+        // may return false even though Electron can load the file from the
+        // archive. In that case, accept the asar path and return it so
+        // `BrowserWindow.loadFile()` can resolve it internally.
+        if (candidate.includes(".asar")) {
+          return { path: candidate, query: isControlPanel ? { panel: "true" } : {} };
+        }
+
+        if (fs.existsSync(candidate)) {
+          return { path: candidate, query: isControlPanel ? { panel: "true" } : {} };
+        }
+      } catch (e) {
+        // ignore and try next
+      }
+    }
+
+    // As a last resort, still return the conventional path so callers can
+    // report a helpful error if nothing was found.
+    return { path: path.join(appPath, "src", "dist", "index.html"), query: isControlPanel ? { panel: "true" } : {} };
   }
 }
 

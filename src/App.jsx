@@ -312,6 +312,7 @@ export default function App() {
 
   return (
     <div className="dictation-window">
+      {/* Top-left logo removed so mic appears alone */}
       {/* Voice button - position determined by panelStartPosition setting */}
       <div
         className={`fixed bottom-1 z-50 ${

@@ -10,7 +10,7 @@ import { normalizeDbDate } from "../utils/dateFormatting";
 
 const NOTE_TYPE_COLORS: Record<NoteItem["note_type"], string> = {
   personal: "bg-foreground/5 text-foreground/50",
-  meeting: "bg-blue-500/8 text-blue-500/60 dark:bg-blue-400/10 dark:text-blue-400/60",
+  meeting: "bg-primary/8 text-primary/60 dark:bg-primary/10 dark:text-primary/60",
   upload: "bg-amber-500/8 text-amber-600/60 dark:bg-amber-400/10 dark:text-amber-400/60",
 };
 
